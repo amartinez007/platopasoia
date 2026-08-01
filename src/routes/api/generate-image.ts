@@ -27,15 +27,11 @@ export const Route = createFileRoute("/api/generate-image")({
           method: "POST",
           headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json" },
           body: JSON.stringify({
-            model: "google/gemini-3.1-flash-image",
-            messages: [
-              {
-                role: "user",
-                content: `Fotografía cenital de alta calidad de un ingrediente de cocina: ${prompt}. Sobre una tabla de madera clara, luz natural suave, estilo editorial gastronómico, fondo limpio.`,
-              },
-            ],
-            modalities: ["image", "text"],
+            model: "openai/gpt-image-1-mini",
+            prompt: `Fotografía cenital de alta calidad de un ingrediente de cocina: ${prompt}. Sobre una tabla de madera clara, luz natural suave, estilo editorial gastronómico, fondo limpio.`,
+            quality: "low",
             stream: true,
+            partial_images: 1,
           }),
         });
 
