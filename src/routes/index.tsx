@@ -15,13 +15,13 @@ import { streamImage } from "@/lib/streamImage";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "ZenvorIA — Recetas con IA, ingredientes e imágenes" },
+      { title: "PlatoPasoIA — Recetas con IA, ingredientes e imágenes" },
       {
         name: "description",
         content:
-          "Escribe lo que quieres cocinar y ZenvorIA crea la lista de ingredientes en checklist, genera una imagen de cada ingrediente y el paso a paso con tiempos.",
+          "Escribe lo que quieres cocinar y PlatoPasoIA crea la lista de ingredientes en checklist, genera una imagen de cada ingrediente y el paso a paso con tiempos.",
       },
-      { property: "og:title", content: "ZenvorIA — Recetas con IA" },
+      { property: "og:title", content: "PlatoPasoIA — Recetas con IA" },
       {
         property: "og:description",
         content:
@@ -88,7 +88,7 @@ function Index() {
           <Sparkles className="size-3.5 text-primary" /> Cocina con inteligencia artificial
         </span>
         <h1 className="mt-5 text-5xl leading-[1.05] font-black tracking-tight sm:text-6xl">
-          Zenvor<span className="text-primary">IA</span>
+          PlatoPaso<span className="text-primary">IA</span>
         </h1>
         <p className="mx-auto mt-4 max-w-xl text-base text-muted-foreground">
           Cuéntame qué te apetece cocinar. Te devuelvo la lista de ingredientes en checklist, una
