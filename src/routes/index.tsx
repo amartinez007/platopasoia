@@ -21,11 +21,11 @@ export const Route = createFileRoute("/")({
         content:
           "Escribe lo que quieres cocinar y PlatoPasoIA crea la lista de ingredientes en checklist, genera una imagen de cada ingrediente y el paso a paso con tiempos.",
       },
-      { property: "og:title", content: "PlatoPasoIA — Recetas con IA" },
+      { property: "og:title", content: "PlatoPasoIA — Recetas con IA, ingredientes e imágenes" },
       {
         property: "og:description",
         content:
-          "Checklist de ingredientes, imágenes generadas con IA y procedimiento paso a paso con tiempos.",
+          "Escribe lo que quieres cocinar y PlatoPasoIA crea la lista de ingredientes en checklist, genera una imagen de cada ingrediente y el paso a paso con tiempos.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

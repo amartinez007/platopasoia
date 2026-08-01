@@ -77,14 +77,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "PlatoPasoIA — Recetas con IA, ingredientes e imágenes" },
+      { name: "description", content: "Escribe lo que quieres cocinar y PlatoPasoIA crea la lista de ingredientes en checklist, genera una imagen de cada ingrediente y el paso a paso con tiempos." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "PlatoPasoIA — Recetas con IA, ingredientes e imágenes" },
+      { property: "og:description", content: "Escribe lo que quieres cocinar y PlatoPasoIA crea la lista de ingredientes en checklist, genera una imagen de cada ingrediente y el paso a paso con tiempos." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "PlatoPasoIA — Recetas con IA, ingredientes e imágenes" },
+      { name: "twitter:description", content: "Escribe lo que quieres cocinar y PlatoPasoIA crea la lista de ingredientes en checklist, genera una imagen de cada ingrediente y el paso a paso con tiempos." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/db44f784-afba-49b5-bafb-d2889cea86c4/id-preview-60c50f5e--d47bfdc4-1407-48b6-bb11-e8e3277097a6.lovable.app-1785585202189.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/db44f784-afba-49b5-bafb-d2889cea86c4/id-preview-60c50f5e--d47bfdc4-1407-48b6-bb11-e8e3277097a6.lovable.app-1785585202189.png" },
     ],
     links: [
       {
