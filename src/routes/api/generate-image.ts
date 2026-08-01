@@ -1,10 +1,25 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { z } from "zod";
+
+const BodySchema = z.object({
+  prompt: z.string().trim().min(2).max(2000),
+});
 
 export const Route = createFileRoute("/api/generate-image")({
   server: {
     handlers: {
       POST: async ({ request }) => {
-        const { prompt } = (await request.json()) as { prompt: string };
+        let body: unknown;
+        try {
+          body = await request.json();
+        } catch {
+          return new Response("Solicitud no válida", { status: 400 });
+        }
+        const parsed = BodySchema.safeParse(body);
+        if (!parsed.success) {
+          return new Response("Entrada no válida", { status: 400 });
+        }
+        const { prompt } = parsed.data;
         const key = process.env["LOVABLE_API_KEY"];
         if (!key) return new Response("Missing LOVABLE_API_KEY", { status: 500 });
 
