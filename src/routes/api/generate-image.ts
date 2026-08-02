@@ -37,7 +37,21 @@ export const Route = createFileRoute("/api/generate-image")({
         });
 
         if (!upstream.ok || !upstream.body) {
-          return new Response(await upstream.text(), { status: upstream.status });
+          const raw = await upstream.text();
+          let message = `Error de OpenAI (${upstream.status})`;
+          try {
+            const parsedError = JSON.parse(raw) as { error?: { code?: string; message?: string } };
+            const code = parsedError.error?.code;
+            if (code === "billing_hard_limit_reached") {
+              message =
+                "Tu cuenta de OpenAI ha alcanzado el límite de facturación. Añade saldo o sube el límite en platform.openai.com para generar imágenes.";
+            } else if (parsedError.error?.message) {
+              message = parsedError.error.message;
+            }
+          } catch {
+            /* respuesta no JSON */
+          }
+          return new Response(message, { status: upstream.status });
         }
 
 
