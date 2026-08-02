@@ -12,7 +12,8 @@ export async function streamImage(
     body: JSON.stringify({ prompt }),
   });
   if (!res.ok || !res.body) {
-    throw new Error(`No se pudo generar la imagen (${res.status})`);
+    const detail = await res.text().catch(() => "");
+    throw new Error(detail || `No se pudo generar la imagen (${res.status})`);
   }
 
   const reader = res.body.pipeThrough(new TextDecoderStream()).getReader();
