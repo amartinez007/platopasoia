@@ -1,6 +1,4 @@
-# RecetIA: Your AI Recipe Creator
-
-Quiero que me crees una app (PlatoPasoIA) que tenga 3 funcionalidades clave, por un lado un creador de recetas utilizando IA (escribo el texto y me hace una lista de los ingredientes en formato checklist). Por otro lado quiero otra funcionalidad aparte que sea capaz de crear una imagen con IA de cada ingrediente, simplemente dandole click a "generar imagen" al lado de la linea. Y por ultimo, el procedimiento paso a paso para realizar la receta en orden para obtener el resultado final (tiempo, cantidad en cada ingrediente, etc.).
+# platospasoIA: Your AI Recipe Creator
 
 This project was built with [Lovable](https://lovable.dev).
 
